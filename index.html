@@ -98,6 +98,8 @@ table.cmp{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
 .cmp tbody th{font-weight:600;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);width:150px;background:var(--glass-strong);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);position:sticky;left:0;z-index:1}
 .cmp thead th:first-child{position:sticky;left:0;z-index:2;background:var(--glass-strong);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur)}
 .cmp tr:last-child td,.cmp tr:last-child th{border-bottom:0}
+.cmp tbody tr.hl td{background:var(--accent-soft)}
+.cmp tbody tr.hl th{color:var(--accent)}
 @media (max-width:520px){.cmp tbody th{width:104px;font-size:10.5px;padding-inline:12px}.cmp th,.cmp td{padding-inline:12px}}
 .num{font-variant-numeric:tabular-nums}
 .big{font-variant-numeric:tabular-nums;font-size:20px;font-weight:700;letter-spacing:-.02em}
@@ -230,6 +232,7 @@ table.cmp{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
   <p class="notice" id="notice"></p>
 
   <h2>Side-by-side <span class="count" id="cmpCount"></span></h2>
+  <p class="notice" style="margin:-4px 4px 12px;max-width:80ch">The <b>Villa scope</b> row puts every studio on Elephant Studio's job (4-min Full HD walkthrough + 40 renders). Elephant's figure is their actual quote; the others are estimates scaled from each studio's own quoted rates, so ask them to re-quote this scope before deciding.</p>
   <div class="table-scroll"><table class="cmp" id="cmp"></table></div>
 
   <h2>Studio dossiers <span class="count" id="dosCount"></span></h2>
@@ -291,12 +294,14 @@ function renderTable(list){
   const t=document.getElementById("cmp");
   document.getElementById("cmpCount").textContent=list.length+" studio"+(list.length===1?"":"s");
   if(!list.length){t.innerHTML=`<tbody><tr><td class="dim">No studios match this view.</td></tr></tbody>`;return}
+  const vEst=list.map(v=>((v.quote||{}).villaEst||{}).totalExGst*1.18).filter(x=>x>0);const vMin=vEst.length>1?Math.min(...vEst):0;
   const priced=list.map(totalWithGst).filter(x=>x>0);const min=priced.length>1?Math.min(...priced):0;
   const rows=[
     ["Status",v=>`<span class="pill ${stOf(stKey(v)).c}">${stOf(stKey(v)).t}</span>`],
     ["Your rating",v=>stars(v)],
     ["Based in",v=>esc(v.city)||missing()],
-    ["Quote (incl. GST)",v=>{const t=totalWithGst(v);if(!t)return missing("No quote yet");const q=v.quote;return`<div class="big">${lakh(t)}${t===min?'<span class="cheapest">lowest</span>':""}</div><div class="dim num" style="font-size:12px">${inr(q.totalExGst)} + ${q.gstPct??18}% GST</div>`}],
+    ["Quote as sent (incl. GST)",v=>{const t=totalWithGst(v);if(!t)return missing("No quote yet");const q=v.quote;return`<div class="big">${lakh(t)}${t===min?'<span class="cheapest">lowest</span>':""}</div><div class="dim num" style="font-size:12px">${inr(q.totalExGst)} + ${q.gstPct??18}% GST</div>`}],
+    ["Villa scope · 4 min + 40 renders",v=>{const e=(v.quote||{}).villaEst;if(!e)return missing("Not estimated");const t=e.totalExGst*1.18;return`<div class="big">${lakh(t)}${t===vMin?'<span class="cheapest">lowest</span>':""}</div><div class="dim num" style="font-size:12px">${e.actual?"Actual quote":"Estimate"} · ${inr(e.totalExGst)} + GST</div><div class="dim" style="font-size:12px">${e.actual?"":`Walkthrough ${lakh(e.walkthrough)} · stills ${lakh(e.stills)} · `}${esc(e.includes)}</div>`}],
     ["Quoted for",v=>{const p=(v.quote||{}).project||"";if(!p)return missing();const other=/not breeze/i.test(p);return other?`<span class="pill st-no" style="white-space:normal">Different project</span><div class="dim" style="font-size:12px;margin-top:4px">${esc(p.replace(/\s*[–-]\s*NOT.*$/i,""))}</div>`:esc(p.replace(/\s*\(.*\)$/,""))}],
     ["Walkthrough",v=>{const q=v.quote||{};const p=[q.walkthroughMinutes?q.walkthroughMinutes+" min":"",q.resolution].filter(Boolean).join(" · ");return p?esc(p):missing()}],
     ["Stills included",v=>{const q=v.quote||{};return q.stills?esc(q.stills):missing()}],
@@ -310,7 +315,7 @@ function renderTable(list){
     ["Walkthrough reels",v=>`<span class="num">${(v.walkthroughs||[]).length}</span> <span class="dim">walkthroughs</span> · <span class="num">${(v.models||[]).length}</span> <span class="dim">model videos</span>`]
   ];
   t.innerHTML=`<thead><tr><th scope="col" style="position:sticky;left:0;z-index:2"></th>${list.map(v=>`<th scope="col">${esc(v.name)}<span class="tiny">${esc(v.tagline||"")}</span></th>`).join("")}</tr></thead>
-  <tbody>${rows.map(([h,f])=>`<tr><th scope="row">${h}</th>${list.map(v=>`<td>${f(v)}</td>`).join("")}</tr>`).join("")}</tbody>`;
+  <tbody>${rows.map(([h,f],ri)=>`<tr${/^Villa scope/.test(h)?' class="hl"':""}><th scope="row">${h}</th>${list.map(v=>`<td>${f(v)}</td>`).join("")}</tr>`).join("")}</tbody>`;
 }
 
 function reel(items){
@@ -339,7 +344,8 @@ function quotePanel(v){
   const q=v.quote||{};const t=totalWithGst(v);
   const rows=[["Project",q.project],["Scope",q.scope],["Price (ex. GST)",q.totalExGst?inr(q.totalExGst):""],["Price incl. GST",t?inr(t):""],["Walkthrough",[q.walkthroughMinutes?q.walkthroughMinutes+" min":"",q.resolution].filter(Boolean).join(" · ")],["Stills",q.stills],["Unit rates",q.rates],["Extra renders",q.extraRender],["Timeline",q.timeline],["Payment",q.payment],["Validity",q.validity],["Not included",q.exclusions],["Quote date",q.date]].filter(r=>r[1]);
   if(!rows.length)return`<p class="dim" style="margin:6px 0">No quote received yet. Use <b>Edit</b> to add one when it arrives.</p>`;
-  return`<div class="quote"><dl>${rows.map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join("")}</dl></div>`;
+  const e=q.villaEst;const est=e?`<div class="lbl" style="margin-top:14px">Villa scope · 4 min + 40 renders</div><dl><dt>${e.actual?"Actual quote":"Estimate"}</dt><dd><b>${inr(e.totalExGst*1.18)}</b> incl. GST (${inr(e.totalExGst)} + GST)</dd><dt>Includes</dt><dd>${esc(e.includes)}</dd><dt>How worked out</dt><dd>${esc(e.how)}</dd></dl>`:"";
+  return`<div class="quote"><div class="lbl">Quote as sent</div><dl>${rows.map(([a,b])=>`<dt>${a}</dt><dd>${esc(b)}</dd>`).join("")}</dl>${est}</div>`;
 }
 
 function renderCards(list){

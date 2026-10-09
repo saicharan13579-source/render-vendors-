@@ -104,7 +104,15 @@
    "timeline": "55–60 days",
    "totalExGst": 1475000,
    "validity": "3 months",
-   "walkthroughMinutes": 3
+   "walkthroughMinutes": 3,
+   "villaEst": {
+    "walkthrough": 1083333,
+    "stills": 1060000,
+    "totalExGst": 2143333,
+    "includes": "Drone shoot not included (extra)",
+    "how": "FOV didn't split its ₹14.75L. Stills taken at ₹26.5K (average of their ₹25K exterior / ₹28K interior extra rate), so 25 stills ≈ ₹6.63L and the 3-min walkthrough ≈ ₹8.13L (₹2.71L/min). Scaled to 4 min + 40 stills.",
+    "actual": false
+   }
   },
   "rating": 0,
   "services": [
@@ -299,7 +307,15 @@
    "timeline": "45 days",
    "totalExGst": 1800000,
    "validity": "until 12 Nov 2025 (expired, ask them to re-confirm)",
-   "walkthroughMinutes": 3
+   "walkthroughMinutes": 3,
+   "villaEst": {
+    "walkthrough": 1800000,
+    "stills": 720000,
+    "totalExGst": 2520000,
+    "includes": "Drone and teaser not quoted",
+    "how": "Their quote: ₹4.5L per walkthrough minute and ₹18K per still. Scaled to 4 min + 40 stills.",
+    "actual": false
+   }
   },
   "rating": 0,
   "services": [
@@ -967,7 +983,15 @@
    "timeline": "60 working days after modelling approval",
    "totalExGst": 2700000,
    "validity": "3 months (dated 4 Nov 2025, so expired)",
-   "walkthroughMinutes": 2.5
+   "walkthroughMinutes": 2.5,
+   "villaEst": {
+    "walkthrough": 3360000,
+    "stills": 1600000,
+    "totalExGst": 4960000,
+    "includes": "Drone shoot and WhatsApp teaser included",
+    "how": "Their quote: ₹21L for 150 sec (₹14K/sec) and ₹40K per render. Scaled to 240 sec + 40 renders.",
+    "actual": false
+   }
   },
   "rating": 0,
   "services": [
@@ -1035,7 +1059,15 @@
    "validity": "3 months (to Jan 2027)",
    "payment": "50% advance (non-refundable) · 40% on hi-res delivery & preview · 10% on final walkthrough",
    "exclusions": "GST extra; source files never shared",
-   "date": "9 Oct 2026"
+   "date": "9 Oct 2026",
+   "villaEst": {
+    "walkthrough": 2300000,
+    "stills": 0,
+    "totalExGst": 2300000,
+    "includes": "40 renders, drone, teaser and music included",
+    "how": "Elephant's actual quote for this scope (Full HD). 4K is ₹26.5L.",
+    "actual": true
+   }
   },
   "rating": 0,
   "services": [
