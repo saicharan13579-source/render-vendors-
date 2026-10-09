@@ -83,7 +83,7 @@ h1{font-family:var(--f-display);font-weight:700;font-size:clamp(28px,4.6vw,44px)
 .toolbar input[type=search]{flex:1 1 220px;min-width:0;border-radius:999px;padding:10px 16px;outline:none}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
 .chip{border-radius:999px;padding:6px 13px;font-size:13px;font-weight:500;cursor:pointer}
-.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:transparent}
+.chip[aria-pressed=true]{background:var(--accent);color:#fff;border-color:transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 16px -6px var(--accent)}
 .notice{font-size:13px;color:var(--muted);margin:8px 4px 0}
 
 h2{font-family:var(--f-display);font-weight:700;font-size:22px;letter-spacing:-.02em;margin:34px 4px 12px;display:flex;align-items:baseline;gap:12px}
@@ -247,6 +247,8 @@ const STATUSES=[
   {k:"no",t:"Not selected",c:"st-no"},
   {k:"final",t:"Final pick",c:"st-final"}];
 const stOf=k=>STATUSES.find(s=>s.k===k)||STATUSES[0];
+const hasQuote=v=>Number((v.quote||{}).totalExGst)>0;
+const stKey=v=>{const k=v.status||"review";if(k==="hold"&&hasQuote(v))return"review";if(!hasQuote(v)&&k==="review")return"hold";return k};
 const ICON={
   web:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>',
   ig:'<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1.8" y="1.8" width="12.4" height="12.4" rx="3.5"/><circle cx="8" cy="8" r="3"/><circle cx="11.9" cy="4.1" r=".6" fill="currentColor"/></svg>',
@@ -267,7 +269,7 @@ function toast(m){const t=document.getElementById("toast");t.textContent=m;t.hid
 function totalWithGst(v){const q=v.quote||{};const b=Number(q.totalExGst)||0;if(!b)return 0;return b*(1+(Number(q.gstPct??18)||0)/100)}
 
 function matches(v){
-  if(filter!=="all"&&(v.status||"review")!==filter)return false;
+  if(filter!=="all"&&stKey(v)!==filter)return false;
   if(!query)return true;
   const hay=JSON.stringify(v).toLowerCase();
   return query.toLowerCase().split(/\s+/).every(w=>hay.includes(w));
@@ -276,7 +278,7 @@ function matches(v){
 function renderFilters(){
   const el=document.getElementById("filters");
   const opts=[{k:"all",t:"All"},...STATUSES];
-  el.innerHTML=opts.map(o=>{const n=o.k==="all"?vendors.length:vendors.filter(v=>(v.status||"review")===o.k).length;
+  el.innerHTML=opts.map(o=>{const n=o.k==="all"?vendors.length:vendors.filter(v=>stKey(v)===o.k).length;
     if(o.k!=="all"&&!n)return"";return`<button class="chip" type="button" data-f="${o.k}" aria-pressed="${filter===o.k}">${o.t} <span class="num">${n}</span></button>`}).join("");
 }
 
@@ -291,7 +293,7 @@ function renderTable(list){
   if(!list.length){t.innerHTML=`<tbody><tr><td class="dim">No studios match this view.</td></tr></tbody>`;return}
   const priced=list.map(totalWithGst).filter(x=>x>0);const min=priced.length>1?Math.min(...priced):0;
   const rows=[
-    ["Status",v=>`<span class="pill ${stOf(v.status).c}">${stOf(v.status).t}</span>`],
+    ["Status",v=>`<span class="pill ${stOf(stKey(v)).c}">${stOf(stKey(v)).t}</span>`],
     ["Your rating",v=>stars(v)],
     ["Based in",v=>esc(v.city)||missing()],
     ["Quote (incl. GST)",v=>{const t=totalWithGst(v);if(!t)return missing("No quote yet");const q=v.quote;return`<div class="big">${lakh(t)}${t===min?'<span class="cheapest">lowest</span>':""}</div><div class="dim num" style="font-size:12px">${inr(q.totalExGst)} + ${q.gstPct??18}% GST</div>`}],
@@ -363,7 +365,7 @@ function renderCards(list){
     return`<article class="card" id="v-${esc(v.id)}">
       <div class="card-top">
         <div><h3>${esc(v.name)}</h3><div class="loc">${esc(v.city||"Location not shared")}</div></div>
-        <div class="card-side"><span class="pill ${stOf(v.status).c}">${stOf(v.status).t}</span>${stars(v)}</div>
+        <div class="card-side"><span class="pill ${stOf(stKey(v)).c}">${stOf(stKey(v)).t}</span>${stars(v)}</div>
         ${v.about?`<p class="about">${esc(v.about)}</p>`:""}
         ${(v.services||[]).length?`<div class="tags">${v.services.map(s=>`<span class="tag">${esc(s)}</span>`).join("")}</div>`:""}
       </div>
@@ -376,7 +378,7 @@ function renderCards(list){
       <div class="panel" role="tabpanel">${panel}</div>
       <div class="card-foot">
         <label class="dim" style="font-size:13px;display:flex;gap:6px;align-items:center">Status
-          <select id="st-${esc(v.id)}" data-status="${esc(v.id)}" ${canWrite?"":"disabled"}>${STATUSES.map(s=>`<option value="${s.k}" ${s.k===(v.status||"review")?"selected":""}>${s.t}</option>`).join("")}</select></label>
+          <select id="st-${esc(v.id)}" data-status="${esc(v.id)}" ${canWrite?"":"disabled"}>${STATUSES.map(s=>`<option value="${s.k}" ${s.k===stKey(v)?"selected":""}>${s.t}</option>`).join("")}</select></label>
         ${canWrite?`<button class="btn small" type="button" data-edit="${esc(v.id)}">Edit</button>`:""}
       </div>
     </article>`}).join("");
