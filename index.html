@@ -297,6 +297,7 @@ function renderTable(list){
     ["Your rating",v=>stars(v)],
     ["Based in",v=>esc(v.city)||missing()],
     ["Quote (incl. GST)",v=>{const t=totalWithGst(v);if(!t)return missing("No quote yet");const q=v.quote;return`<div class="big">${lakh(t)}${t===min?'<span class="cheapest">lowest</span>':""}</div><div class="dim num" style="font-size:12px">${inr(q.totalExGst)} + ${q.gstPct??18}% GST</div>`}],
+    ["Quoted for",v=>{const p=(v.quote||{}).project||"";if(!p)return missing();const other=/not breeze/i.test(p);return other?`<span class="pill st-no" style="white-space:normal">Different project</span><div class="dim" style="font-size:12px;margin-top:4px">${esc(p.replace(/\s*[–-]\s*NOT.*$/i,""))}</div>`:esc(p.replace(/\s*\(.*\)$/,""))}],
     ["Walkthrough",v=>{const q=v.quote||{};const p=[q.walkthroughMinutes?q.walkthroughMinutes+" min":"",q.resolution].filter(Boolean).join(" · ");return p?esc(p):missing()}],
     ["Stills included",v=>{const q=v.quote||{};return q.stills?esc(q.stills):missing()}],
     ["Unit rates",v=>{const q=v.quote||{};return q.rates?esc(q.rates):missing()}],
@@ -323,9 +324,9 @@ function galleryPanel(v){
   const g=v.gallery||[];if(!g.length)return`<p class="dim" style="margin:6px">No images added yet.</p>`;
   const kinds=[...new Set(g.map(x=>x.kind||"render"))];const k=galKind[v.id]||"all";
   const list=g.map((x,i)=>({...x,i})).filter(x=>k==="all"||(x.kind||"render")===k);
-  const lab={render:"Renders",model:"Model photos"};
+  const lab={render:"Renders sent to us",model:"Model photos",web:"From their website"};
   return`${kinds.length>1?`<div class="gal-filter">${["all",...kinds].map(c=>`<button class="chip" type="button" data-galk="${c}" data-id="${esc(v.id)}" aria-pressed="${k===c}">${c==="all"?"All":lab[c]||c} <span class="num">${c==="all"?g.length:g.filter(x=>(x.kind||"render")===c).length}</span></button>`).join("")}</div>`:""}
-  <div class="gal">${list.map(x=>`<button type="button" data-lb="${esc(v.id)}" data-i="${x.i}" aria-label="Open image ${x.i+1}"><img src="${esc(x.src)}" alt="${esc(v.name)} ${lab[x.kind]||"image"} ${x.i+1}" loading="lazy" decoding="async"></button>`).join("")}</div>`;
+  <div class="gal">${list.map(x=>`<button type="button" data-lb="${esc(v.id)}" data-i="${x.i}" aria-label="Open image ${x.i+1}"><img src="${esc(x.src)}" alt="${esc(x.title||v.name+" image "+(x.i+1))}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('button').hidden=true"></button>`).join("")}</div>`;
 }
 let lbState=null;
 function openLb(id,i){lbState={id,i};drawLb()}
@@ -333,7 +334,7 @@ function drawLb(){let root=document.getElementById("lbRoot");if(!lbState){if(roo
   const v=vendors.find(x=>x.id===lbState.id);const g=(v&&v.gallery)||[];if(!g.length){lbState=null;return drawLb()}
   lbState.i=(lbState.i+g.length)%g.length;const x=g[lbState.i];
   if(!root){root=document.createElement("div");root.id="lbRoot";document.body.appendChild(root)}
-  root.innerHTML=`<div class="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><div class="lb-top"><span>${esc(v.name)} · ${lbState.i+1} / ${g.length}</span><button class="lb-btn" type="button" data-lbx>Close</button></div><div class="lb-stage" data-lbx-bg><img src="${esc(x.src)}" alt="${esc(v.name)} image ${lbState.i+1}"></div><div class="lb-nav"><button class="lb-btn" type="button" data-lbm="-1">‹ Previous</button><button class="lb-btn" type="button" data-lbm="1">Next ›</button></div></div>`}
+  root.innerHTML=`<div class="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><div class="lb-top"><span>${esc(v.name)}${x.title?" · "+esc(x.title):""} · ${lbState.i+1} / ${g.length}${x.page?` · <a href="${esc(x.page)}" target="_blank" rel="noopener" style="color:#9cc7ff">source</a>`:""}</span><button class="lb-btn" type="button" data-lbx>Close</button></div><div class="lb-stage" data-lbx-bg><img referrerpolicy="no-referrer" src="${esc(x.src)}" alt="${esc(v.name)} image ${lbState.i+1}"></div><div class="lb-nav"><button class="lb-btn" type="button" data-lbm="-1">‹ Previous</button><button class="lb-btn" type="button" data-lbm="1">Next ›</button></div></div>`}
 function quotePanel(v){
   const q=v.quote||{};const t=totalWithGst(v);
   const rows=[["Project",q.project],["Scope",q.scope],["Price (ex. GST)",q.totalExGst?inr(q.totalExGst):""],["Price incl. GST",t?inr(t):""],["Walkthrough",[q.walkthroughMinutes?q.walkthroughMinutes+" min":"",q.resolution].filter(Boolean).join(" · ")],["Stills",q.stills],["Unit rates",q.rates],["Extra renders",q.extraRender],["Timeline",q.timeline],["Payment",q.payment],["Validity",q.validity],["Not included",q.exclusions],["Quote date",q.date]].filter(r=>r[1]);
@@ -347,7 +348,7 @@ function renderCards(list){
   if(!loaded){el.innerHTML=`<div class="empty">Loading vendors…</div>`;return}
   if(!list.length){el.innerHTML=`<div class="empty">${vendors.length?"No studios match this search or filter.":"No vendors yet. Use <b>+ Add vendor</b> to add the first studio."}</div>`;return}
   el.innerHTML=list.map(v=>{
-    const tab=openTabs[v.id]||"walk";
+    const tab=openTabs[v.id]||((v.gallery||[]).length?"gallery":"walk");
     const tabs=[["walk","Walkthroughs",(v.walkthroughs||[]).length],["gallery","Images",(v.gallery||[]).length],["models","Models",(v.models||[]).length],["quote","Quote",null],["notes","Clients & notes",null]];
     let panel="";
     if(tab==="walk")panel=reel(v.walkthroughs);

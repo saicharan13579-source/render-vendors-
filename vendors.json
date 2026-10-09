@@ -7,7 +7,7 @@
   "contactName": "Neha",
   "contactRole": "Phone saved as \"Studio Fo Delhi 3D Designs\"",
   "email": "Neha@studiofov.com",
-  "instagram": "",
+  "instagram": "https://www.instagram.com/studiofov/",
   "models": [
    {
     "label": "Nandivardhan Miraya, Thane",
@@ -55,7 +55,7 @@
    }
   ],
   "name": "Studio FOV",
-  "notes": "Quote received for Breeze in the Courtyard (see Quote tab). Final files are unwatermarked only after the last payment. Max/PSD source files not provided. Big façade changes or mid-production design changes cost extra.\n\nMarket check (Oct 2026, public Indian guides): exterior render ₹15K–60K per view, interior ₹12K–45K, aerial ₹25K–80K, walkthrough ₹80K–4L per finished minute. FOV's extra-render rates (₹25K ext / ₹28K int) sit at the lower-middle of that range. If the 25 stills are valued at ~₹25K each (~₹6.25L), the 3-min walkthrough works out to roughly ₹2.8L per minute, which is mid-to-upper market.",
+  "notes": "Quote received for Breeze in the Courtyard (see Quote tab). Final files are unwatermarked only after the last payment. Max/PSD source files not provided. Big façade changes or mid-production design changes cost extra.\n\nMarket check (Oct 2026, public Indian guides): exterior render ₹15K–60K per view, interior ₹12K–45K, aerial ₹25K–80K, walkthrough ₹80K–4L per finished minute. FOV's extra-render rates (₹25K ext / ₹28K int) sit at the lower-middle of that range. If the 25 stills are valued at ~₹25K each (~₹6.25L), the 3-min walkthrough works out to roughly ₹2.8L per minute, which is mid-to-upper market.\n\nFrom their website: main line +91 98913 77834, info@studiofov.com.",
   "order": 1,
   "otherLinks": [
    {
@@ -65,6 +65,22 @@
    {
     "label": "Model showreel 24–25",
     "url": "https://youtu.be/uZOlho-yYyw"
+   },
+   {
+    "label": "Facebook",
+    "url": "https://www.facebook.com/StudioFOV"
+   },
+   {
+    "label": "LinkedIn (Vikram Khanna)",
+    "url": "https://www.linkedin.com/in/vikram-khanna-62781153/"
+   },
+   {
+    "label": "Portfolio PDF (website)",
+    "url": "https://studiofov.com/wp-content/uploads/2025/09/ilovepdf_merged-1.pdf"
+   },
+   {
+    "label": "Render portfolio page",
+    "url": "https://studiofov.com/fov-service1/"
    }
   ],
   "phone": "+91 91409 79611",
@@ -141,7 +157,99 @@
    }
   ],
   "website": "https://www.studiofov.com",
-  "id": "studio-fov"
+  "id": "studio-fov",
+  "gallery": [
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/evos.webp",
+    "kind": "web",
+    "title": "Evos",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/sugee.webp",
+    "kind": "web",
+    "title": "Sugee",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/bhagwati-celestia.webp",
+    "kind": "web",
+    "title": "Bhagwati Celestia",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/evos-builcon.webp",
+    "kind": "web",
+    "title": "Evos Buildcon",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/06.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/05.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/04.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-06-at-16.28.30-1.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/11/02.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2024/07/2-2.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2024/07/Entrance-Gate-Night-View.webp",
+    "kind": "web",
+    "title": "Entrance gate, night view",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/09/i85twbd1p3u8pmoh1wpp.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/09/fnme1djsnfaqaitljwa9.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/09/iwq0x7iaeqkwszp5stvo.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   },
+   {
+    "src": "https://studiofov.com/wp-content/uploads/2025/09/image-1.webp",
+    "kind": "web",
+    "title": "Studio FOV render",
+    "page": "https://studiofov.com/"
+   }
+  ]
  },
  {
   "about": "Ahmedabad-based architectural visualization studio (on Behance since 2017) doing exterior/interior renders and walkthroughs for residential, villa and high-rise projects, including several in Hyderabad.",
@@ -250,7 +358,81 @@
    }
   ],
   "website": "https://www.designpixel.co.in",
-  "id": "design-pixel"
+  "id": "design-pixel",
+  "gallery": [
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/8d5b5c185112911.Y3JvcCw0MjQ0LDMzMjAsMzc4LDA.jpg",
+    "kind": "web",
+    "title": "Origin Park",
+    "page": "https://www.behance.net/gallery/185112911/Origin-Park"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/844dad185112517.Y3JvcCwzODM1LDMwMDAsNzUwLDA.jpg",
+    "kind": "web",
+    "title": "Primark Inspira | Highrise",
+    "page": "https://www.behance.net/gallery/185112517/Primark-Inspira-Highrise"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/c08212185112253.Y3JvcCwzODM1LDMwMDAsNzUwLDA.jpg",
+    "kind": "web",
+    "title": "Mystic Wave Goa",
+    "page": "https://www.behance.net/gallery/185112253/Mystic-Wave-Goa"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/7b522b185108313.Y3JvcCwzOTk5LDMxMjgsMCwxMDk5.jpg",
+    "kind": "web",
+    "title": "Issara Belmond Villas",
+    "page": "https://www.behance.net/gallery/185108313/Issara-Belmond-Villas"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/1ac115179343205.Y3JvcCw0NDc0LDM1MDAsMTgzOCww.jpg",
+    "kind": "web",
+    "title": "IXORA",
+    "page": "https://www.behance.net/gallery/179343205/IXORA"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/e919ea179338083.Y3JvcCw2MDAwLDQ2OTMsMCw4MDE.jpg",
+    "kind": "web",
+    "title": "Celkon – Exterior",
+    "page": "https://www.behance.net/gallery/179338083/Celkon-Exterior"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/3fece7176101163.Y3JvcCwzNTk2LDI4MTMsNzAzLDA.jpg",
+    "kind": "web",
+    "title": "Shivanjali Shashwat",
+    "page": "https://www.behance.net/gallery/176101163/SHIVANJALI-SHASHWAT"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/fd4f67176100497.Y3JvcCw0MzE2LDMzNzYsODQ0LDA.jpg",
+    "kind": "web",
+    "title": "Ariane Groves",
+    "page": "https://www.behance.net/gallery/176100497/Ariane-Groves"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/4baa59176100263.Y3JvcCw1MTEzLDQwMDAsMTAwMCww.jpg",
+    "kind": "web",
+    "title": "Saraa City",
+    "page": "https://www.behance.net/gallery/176100263/Saraa-City"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/0d1558160712623.Y3JvcCwzODM1LDMwMDAsNzUwLDA.jpg",
+    "kind": "web",
+    "title": "Shivanjali Imperia",
+    "page": "https://www.behance.net/gallery/160712623/Shivanjali-Imperia"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/37b12a160711447.Y3JvcCwzNTk2LDI4MTMsNzAzLDA.jpg",
+    "kind": "web",
+    "title": "Sargam Sarita",
+    "page": "https://www.behance.net/gallery/160711447/Sargam-Sarita"
+   },
+   {
+    "src": "https://mir-s3-cdn-cf.behance.net/projects/808/d8b374159591809.Y3JvcCwzODM1LDMwMDAsNzUwLDA.jpg",
+    "kind": "web",
+    "title": "High Garden",
+    "page": "https://www.behance.net/gallery/159591809/High-Garden"
+   }
+  ]
  },
  {
   "about": "Architectural visualization company making architectural scale models, walkthrough films, AR/VR experiences, brochures, drone shoots and chroma shoots. Sister brand Dawn Models handles physical models.",
@@ -458,6 +640,246 @@
     "kind": "model",
     "src": "img/dawn-digital/33.jpg",
     "w": 1100
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/_Aesthetic_Gurgoan.jpg",
+    "kind": "web",
+    "title": "Aesthetic, Gurgaon",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Aakash%20Courtyard_Jamshedpur.jpg",
+    "kind": "web",
+    "title": "Aakash Courtyard, Jamshedpur",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Abloon_Noida.jpg",
+    "kind": "web",
+    "title": "Abloon, Noida",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/AEDAS_MUMBAI.jpg",
+    "kind": "web",
+    "title": "AEDAS, MUMBAI",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/APEX_Ghaziabad.jpg",
+    "kind": "web",
+    "title": "APEX, Ghaziabad",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/ATS_SHIMLA.jpg",
+    "kind": "web",
+    "title": "ATS, SHIMLA",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Burj%20Khalifa-Dubai.jpg",
+    "kind": "web",
+    "title": "Burj Khalifa – Dubai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/CASAGRAND_CHENNAI.jpg",
+    "kind": "web",
+    "title": "CASAGRAND, CHENNAI",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Cyber%20Thumb_Noida.jpg",
+    "kind": "web",
+    "title": "Cyber Thumb, Noida",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/DAMAC,DUBAI.jpg",
+    "kind": "web",
+    "title": "DAMAC, DUBAI",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Day%20Semi%20Aerial-Lowres.jpg",
+    "kind": "web",
+    "title": "Day Semi Aerial – Lowres",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Dosti%20sion_Mumbai.jpg",
+    "kind": "web",
+    "title": "Dosti sion, Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/DSR_Hyderabad.jpg",
+    "kind": "web",
+    "title": "DSR, Hyderabad",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/DSR-Mumbai.jpg",
+    "kind": "web",
+    "title": "DSR – Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Hero%20Cam-02.jpg",
+    "kind": "web",
+    "title": "Hero Cam – 02",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Jio%20World%20Centre_Mumbai.jpg",
+    "kind": "web",
+    "title": "Jio World Centre, Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Kodaikanal.jpg",
+    "kind": "web",
+    "title": "Kodaikanal",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Landscape%20Cam.jpg",
+    "kind": "web",
+    "title": "Landscape Cam",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/LOTUS%20ISLE.jpg",
+    "kind": "web",
+    "title": "LOTUS ISLE",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/MINERVA_MUMBAI.jpg",
+    "kind": "web",
+    "title": "MINERVA, MUMBAI",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Noble%20Arya.jpg",
+    "kind": "web",
+    "title": "Noble Arya",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Nucleous_Gurgoan.jpg",
+    "kind": "web",
+    "title": "Nucleous, Gurgaon",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/OBEROI,%20MUMBAI.jpg",
+    "kind": "web",
+    "title": "OBEROI, MUMBAI",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/OCEAN%20INFRA_NOIDA.jpg",
+    "kind": "web",
+    "title": "OCEAN INFRA, NOIDA",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/OCEAN%20PEARL_Calicut.jpg",
+    "kind": "web",
+    "title": "OCEAN PEARL, Calicut",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Prestiege-jasden-classic_Mumbai.jpg",
+    "kind": "web",
+    "title": "Prestige – Jasdan-classic, Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/prestigecalicut%20_%20Kerala.jpg",
+    "kind": "web",
+    "title": "prestigecalicut , Kerala",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Raheja_Mumbai.JPG",
+    "kind": "web",
+    "title": "Raheja, Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/RUNWAL%20FOREST,MUMBAI.jpg",
+    "kind": "web",
+    "title": "RUNWAL FOREST, MUMBAI",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Sco%20Elite.jpg",
+    "kind": "web",
+    "title": "Sco Elite",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Serinia_Srilanka.jpg",
+    "kind": "web",
+    "title": "Serinia, Srilanka",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/SHALIMAR.jpg",
+    "kind": "web",
+    "title": "SHALIMAR",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Spaze_Gurgoan.jpg",
+    "kind": "web",
+    "title": "Spaze, Gurgaon",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Sugee_Mumbai.jpg",
+    "kind": "web",
+    "title": "Sugee, Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Supreme%20Chembur-Mumbai.jpg",
+    "kind": "web",
+    "title": "Supreme Chembur – Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Tata-Housing_Colombo,Sri%20Lanka.jpg",
+    "kind": "web",
+    "title": "Tata – Housing, Colombo, Sri Lanka",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Transcon%20Triumph%20Tower-Mumbai.jpg",
+    "kind": "web",
+    "title": "Transcon Triumph Tower – Mumbai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Trump_Tower,%20GURGAON.jpg",
+    "kind": "web",
+    "title": "Trump, Tower, GURGAON",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Yelhanka_Chennai.jpg",
+    "kind": "web",
+    "title": "Yelhanka, Chennai",
+    "page": "https://www.dawn-digital.com/gallery/"
+   },
+   {
+    "src": "https://www.dawn-digital.com/assets/gallery/Yoo_One,Pune.jpg",
+    "kind": "web",
+    "title": "Yoo, One, Pune",
+    "page": "https://www.dawn-digital.com/gallery/"
    }
   ],
   "instagram": "https://www.instagram.com/dawndigital_ind/",
@@ -580,30 +1002,51 @@
  },
  {
   "about": "Visualization studio for real estate and design projects: 3D exterior and interior renders, walkthroughs and scale models.",
-  "address": "Sector 1, Dwarka, New Delhi 110045",
+  "address": "Rajapuri, Dwarka Sector 1, near Mahavir Enclave, New Delhi 110045",
   "city": "New Delhi (Dwarka)",
   "clients": "",
-  "contactName": "",
-  "contactRole": "",
+  "contactName": "Mr. Saikiran",
+  "contactRole": "Elephant3D Studio Pvt Ltd",
   "email": "contact@elephant-studio.in",
   "instagram": "",
   "models": [],
   "name": "Elephant Studio",
-  "notes": "Phone, email and address are from their website. Still needed: quote, named contact person, more walkthrough samples.",
+  "notes": "Quote received 9 Oct 2026 for the 42-acre VILLA project, not Breeze in the Courtyard, so it isn't a like-for-like comparison with the other three.\n\nFull HD: ₹23,00,000 + 18% GST = ₹27,14,000. 4K: ₹26,50,000 + GST = ₹31,27,000. Includes 40 renders, drone shoot and WhatsApp teaser free, and voice-over/music. Fastest timeline (35 working days).\n\nAdvance is non-refundable. Payment due within 7 working days of invoice. Phone, email and address from their website.",
   "order": 4,
-  "otherLinks": [],
+  "otherLinks": [
+   {
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/company/elephant-studio-ltd/"
+   }
+  ],
   "phone": "+91 93104 31937",
   "portfolio": [],
   "quote": {
-   "gstPct": 18
+   "project": "Ankura Homes 42-acre villa project (G+1) – NOT Breeze in the Courtyard",
+   "scope": "240-sec animation walkthrough with storyboard, music, logo animation, location map, aerial, entrance & gardens, street view, clubhouse, gym, home theatre, indoor pool, kids & indoor games areas, villa interiors; plus 40 renders, drone shoot and 30-sec WhatsApp teaser (all complimentary).",
+   "totalExGst": 2300000,
+   "gstPct": 18,
+   "walkthroughMinutes": 4,
+   "resolution": "Full HD (4K option ₹26.5L)",
+   "stills": "40 renders (interior/exterior) – complimentary",
+   "rates": "FHD ₹23L for 4 min (≈ ₹5.75L/min) · 4K ₹26.5L (≈ ₹6.6L/min) · renders free (listed at ₹35K)",
+   "extraRender": "₹30K per extra render",
+   "timeline": "35 working days with timely approvals",
+   "validity": "3 months (to Jan 2027)",
+   "payment": "50% advance (non-refundable) · 40% on hi-res delivery & preview · 10% on final walkthrough",
+   "exclusions": "GST extra; source files never shared",
+   "date": "9 Oct 2026"
   },
   "rating": 0,
   "services": [
    "3D walkthroughs",
    "Exterior & interior renders",
-   "Scale models"
+   "Scale models",
+   "VR",
+   "2D & 3D floor plans",
+   "Cut sections"
   ],
-  "status": "hold",
+  "status": "review",
   "tagline": "Renders, walkthroughs, scale models",
   "walkthroughs": [
    {
@@ -612,6 +1055,134 @@
    }
   ],
   "website": "https://www.elephant-studio.in/",
-  "id": "elephant-studio"
+  "id": "elephant-studio",
+  "gallery": [
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_4ac70077a9514a5f8f0249c09ace411e~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_4ac70077a9514a5f8f0249c09ace411e~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_542327aef866435f943a0d9a9763fa4c~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_542327aef866435f943a0d9a9763fa4c~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_a128afbf385243e59a07a090ffffa969~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_a128afbf385243e59a07a090ffffa969~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_67f92234caf54ba8b7591e22624f7c73~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_67f92234caf54ba8b7591e22624f7c73~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_730b9e49055c44aba76c95e7c30c1dd0~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_730b9e49055c44aba76c95e7c30c1dd0~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_683efc2946444a13a2422921fcfb4241~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_683efc2946444a13a2422921fcfb4241~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_676df6ce79c0495d9136121c81d37b40~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_676df6ce79c0495d9136121c81d37b40~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_3c4ae29974344028b8101e2a41353a5c~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_3c4ae29974344028b8101e2a41353a5c~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_fee0c31af9bc4fd8b8fbd7bef8a75eba~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_fee0c31af9bc4fd8b8fbd7bef8a75eba~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_82921de75a9240229cd1b540d4a33e0c~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_82921de75a9240229cd1b540d4a33e0c~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_868354c60980433591608e99240cbadc~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_868354c60980433591608e99240cbadc~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_c2e08a5b9c8643c8b959477d0ec9555b~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_c2e08a5b9c8643c8b959477d0ec9555b~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_0fa0e5e2020d40388aefb9676c1b922c~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_0fa0e5e2020d40388aefb9676c1b922c~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_4124fe356d91492a9fbcbe6edad4cdb1~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_4124fe356d91492a9fbcbe6edad4cdb1~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_5de33f1746ef4b23817b6f0570c29eef~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_5de33f1746ef4b23817b6f0570c29eef~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_7f25c8afc16041ac9ea6dd0380f0c646~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_7f25c8afc16041ac9ea6dd0380f0c646~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_3b6223e412bf405496996257a0e55dae~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_3b6223e412bf405496996257a0e55dae~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_9b953fa17c5643c78aa5d36c810d127f~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_9b953fa17c5643c78aa5d36c810d127f~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_300921989f9e4d3bbde1490feccbb0a8~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_300921989f9e4d3bbde1490feccbb0a8~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_12e1120e6848452abaf0e8ac2bc00788~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_12e1120e6848452abaf0e8ac2bc00788~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   },
+   {
+    "src": "https://static.wixstatic.com/media/cb2e67_10de51da4cec4d5f98b332ebbd3c9282~mv2.jpg/v1/fit/w_1440,h_811,q_90,enc_auto/cb2e67_10de51da4cec4d5f98b332ebbd3c9282~mv2.jpg",
+    "kind": "web",
+    "title": "Elephant Studio render",
+    "page": "https://www.elephant-studio.in/"
+   }
+  ]
  }
 ]
